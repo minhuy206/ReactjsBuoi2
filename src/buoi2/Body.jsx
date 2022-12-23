@@ -17,17 +17,20 @@ export default class Body extends Component {
 
   render() {
     return (
-      <div>
-        <div className="row pt-5">
-          <div className="col-4">
-            <ModelLeft glasses={this.state} />
-          </div>
-          <div className="col-4">
+      <>
+        <section>
+          <div
+            className="d-flex align-items-center justify-content-around"
+            style={{ padding: "150px" }}
+          >
+            <ModelLeft glasses={this.state.glasses} />
             <ModelRight />
           </div>
-        </div>
-        <ListGlasses getGlasses={this.getGlasses} />
-      </div>
+        </section>
+        <section>
+          <ListGlasses getGlasses={this.getGlasses} />
+        </section>
+      </>
     );
   }
 }
